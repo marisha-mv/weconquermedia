@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeConquer Media — We've Generated Over $1 Billion For Our Clients</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #0A0A0A;
+            --white: #FFFFFF;
+            --cream: #F8F7F4;
+            --red: #DC2626;
+            --red-dark: #B91C1C;
+            --gray-900: #1A1A1A;
+            --gray-800: #2A2A2A;
+            --gray-600: #666666;
+            --gray-400: #999999;
+            --gray-200: #E5E5E5;
+            --gray-100: #F5F5F5;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Premium Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            line-height: 0.95;
+            letter-spacing: 0.02em;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: clamp(3.5rem, 9vw, 9rem);
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 6vw, 6rem);
+        }
+
+        h3 {
+            font-size: clamp(2rem, 4vw, 4rem);
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--gray-600);
+        }
+
+        .large-text {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .eyebrow {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .big-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(4rem, 10vw, 12rem);
+            line-height: 0.85;
+            color: var(--red);
+            font-weight: 400;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+
+        .container-narrow {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+
+        section {
+            padding: 10rem 0;
+        }
+
+        /* Navigation - Minimal & Premium */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.25rem;
+            letter-spacing: 0.1em;
+            color: var(--black);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .logo:hover {
+            opacity: 0.6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.6;
+        }
+
+        .nav-cta {
+            padding: 1rem 2rem;
+            background: var(--red);
+            color: var(--white);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: var(--black);
+        }
+
+        /* Hero - POWERFUL & PREMIUM */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--black) 0%, var(--gray-900) 100%);
+            color: var(--white);
+            padding-top: 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 60%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .big-number {
+            display: block;
+            margin: 2rem 0;
+        }
+
+        .hero .large-text {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 1.5rem 3.5rem;
+            background: transparent;
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--black);
+        }
+
+        .btn-secondary:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Buttons - Premium */
+        .btn-primary {
+            display: inline-block;
+            padding: 1.5rem 3.5rem;
+            background: var(--red);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--red);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        .btn-primary:hover::before {
+            left: 0;
+        }
+
+        .btn-primary:hover {
+            color: var(--black);
+            border-color: var(--white);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 1.5rem 3.5rem;
+            background: transparent;
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--black);
+        }
+
+        .btn-secondary:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        /* Results Bar - IMPACTFUL */
+        .results-bar {
+            background: var(--red);
+            color: var(--white);
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--red-dark);
+        }
+
+        .results-bar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
+        }
+
+        .result-stat {
+            text-align: center;
+        }
+
+        .result-stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3.5rem, 6vw, 6rem);
+            line-height: 1;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .result-stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+        }
+
+        /* Testimonials - HUGE IMPACT + PREMIUM */
+        .testimonials {
+            background: var(--cream);
+            padding: 10rem 0;
+        }
+
+        .testimonials-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 6rem;
+        }
+
+        .testimonials-intro .eyebrow {
+            text-align: center;
+        }
+
+        .testimonials-intro h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonials-intro .large-text {
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 4rem 3.5rem;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--gray-200);
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--red);
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border-color: var(--black);
+        }
+
+        .testimonial-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .testimonial-company {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+        }
+
+        .testimonial-metric {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3.5rem, 5vw, 5rem);
+            color: var(--red);
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-result {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .testimonial-description {
+            font-size: 1rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-quote {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            font-style: italic;
+            border-left: 2px solid var(--red);
+            padding-left: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Logo Strip - Premium */
+        .logo-strip {
+            background: var(--gray-900);
+            padding: 5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-strip .eyebrow {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .logo-strip p {
+            color: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        .logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-item {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(100%) opacity(0.6);
+            transition: all 0.3s;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%) opacity(1);
+        }
+
+        /* Problem Section - Clean & Direct */
+        .problem {
+            background: var(--white);
+            padding: 10rem 0;
+        }
+
+        .problem-intro {
+            max-width: 900px;
+            margin: 0 auto 6rem;
+            text-align: center;
+        }
+
+        .problem-intro h2 {
+            margin-bottom: 2rem;
+        }
+
+        .problem-intro .large-text {
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .problem-list {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+        }
+
+        .problem-item {
+            padding: 3.5rem 3rem;
+            background: var(--gray-100);
+            border-left: 3px solid var(--red);
+            transition: all 0.3s;
+        }
+
+        .problem-item:hover {
+            background: var(--white);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            border-left-width: 4px;
+        }
+
+        .problem-item h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .problem-item p {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+        }
+
+        /* Solve Section */
+        .solve-section {
+            background: var(--black);
+            color: var(--white);
+            padding: 10rem 0;
+        }
+
+        .solve-section h2 {
+            color: var(--white);
+            margin-bottom: 6rem;
+        }
+
+        .solve-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .solve-item h3 {
+            color: var(--red);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .solve-item p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.125rem;
+        }
+
+        @media (max-width: 768px) {
+            .solve-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* Services - Premium Cards */
+        .services {
+            background: var(--cream);
+            padding: 10rem 0;
+        }
+
+        .services-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 6rem;
+        }
+
+        .services-intro .eyebrow {
+            text-align: center;
+        }
+
+        .services-intro h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .services-intro .large-text {
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 4rem 3rem;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--gray-200);
+        }
+
+        .service-card.featured {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+        }
+
+        .service-card.featured::after {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: var(--red);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--red);
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            color: var(--gray-400);
+            margin-bottom: 2rem;
+            letter-spacing: 0.2em;
+        }
+
+        .service-card.featured .service-number {
+            color: var(--red);
+        }
+
+        .service-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card.featured h3 {
+            color: var(--white);
+        }
+
+        .service-card .large-text {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-card.featured .large-text {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 2.5rem 0;
+        }
+
+        .service-features li {
+            padding: 1rem 0;
+            padding-left: 1.5rem;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--gray-200);
+            position: relative;
+        }
+
+        .service-card.featured .service-features li {
+            color: rgba(255, 255, 255, 0.8);
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .service-features li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--red);
+        }
+
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+
+        .service-best-for {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: 0.05em;
+        }
+
+        .service-card.featured .service-best-for {
+            color: var(--white);
+            border-top-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Case Studies - Premium Showcase */
+        .case-studies {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 10rem 0;
+        }
+
+        .case-studies-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 6rem;
+        }
+
+        .case-studies-intro .eyebrow {
+            text-align: center;
+            color: var(--red);
+        }
+
+        .case-studies-intro h2 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .case-studies-intro .large-text {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .case-study {
+            margin-bottom: 8rem;
+        }
+
+        .case-study:last-child {
+            margin-bottom: 0;
+        }
+
+        .case-study-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .case-study-text h3 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .case-study-text p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+        }
+
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .case-metric-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4.5rem;
+            color: var(--red);
+            line-height: 1;
+        }
+
+        .case-metric-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .case-study-image {
+            height: 550px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .case-study:hover .case-study-image img {
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--cream);
+            padding: 10rem 0;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto 6rem;
+            text-align: center;
+        }
+
+        .about-content .eyebrow {
+            text-align: center;
+        }
+
+        .about-content h2 {
+            margin-bottom: 2rem;
+        }
+
+        .about-content .large-text {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .stat {
+            padding: 4rem 3rem;
+            background: var(--white);
+            text-align: center;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5rem;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* FAQs */
+        .faqs {
+            background: var(--white);
+            padding: 10rem 0;
+        }
+
+        .faqs h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .faq-item {
+            padding: 3rem;
+            background: var(--gray-100);
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+
+        .faq-item:hover {
+            background: var(--white);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+            border-left-color: var(--red);
+        }
+
+        .faq-item h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .faq-item p {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Final CTA - POWERFUL */
+        .final-cta {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: var(--white);
+            padding: 12rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        .final-cta .large-text {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 4rem;
+            font-weight: 600;
+        }
+
+        .final-cta .btn-primary {
+            background: var(--white);
+            color: var(--black);
+            border-color: var(--white);
+        }
+
+        .final-cta .btn-primary::before {
+            background: var(--black);
+        }
+
+        .final-cta .btn-primary:hover {
+            color: var(--white);
+            border-color: var(--black);
+        }
+
+        .final-cta-note {
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 1.25rem 1.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid transparent;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--black);
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            background: var(--white);
+            border-color: var(--white);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23000000' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1.5rem center;
+            padding-right: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Footer - Premium & Clean */
+        footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 6rem 0 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 5rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .footer-links h5 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.95rem;
+            line-height: 2.2;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container,
+            .container-narrow {
+                padding: 0 2rem;
+            }
+
+            .nav-container {
+                padding: 1.5rem 2rem;
+            }
+
+            .hero-grid,
+            .case-study-content {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 6rem 0;
+            }
+
+            .hero {
+                padding-top: 6rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .results-bar-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .case-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">WE CONQUER MEDIA</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="fade-in">
+                    <h1>We've Generated</h1>
+                    <div class="big-number">$1 BILLION+</div>
+                    <p class="large-text">For our clients by turning data into rocket fuel, creativity into eyeballs, and audacity into empires.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn-primary">Book Your Strategy Call</a>
+                        <a href="#results" class="btn-secondary" style="background: transparent; color: var(--white); border-color: var(--white);">See Results</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Bar -->
+    <section class="results-bar">
+        <div class="container">
+            <div class="results-bar-grid">
+                <div class="result-stat">
+                    <div class="result-stat-number">$6.5M</div>
+                    <div class="result-stat-label">Generated in 6 Months</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-number">2X</div>
+                    <div class="result-stat-label">Revenue in 60 Days</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-number">30%</div>
+                    <div class="result-stat-label">ROAS Increase</div>
+                </div>
+                <div class="result-stat">
+                    <div class="result-stat-number">25K</div>
+                    <div class="result-stat-label">Signups From Zero</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="results">
+        <div class="container">
+            <div class="testimonials-intro">
+                <div class="eyebrow">Real Results</div>
+                <h2>These Aren't Projections.<br>They're Receipts.</h2>
+                <p class="large-text">From zero to millions. See what happens when strategy meets execution.</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-company">WBECS</div>
+                    <div class="testimonial-metric">30%</div>
+                    <div class="testimonial-result">Revenue Increase + Sold Company</div>
+                    <p class="testimonial-description">They helped us streamline our launch process, deliver more value to our customers and automate processes to drive up revenue. Successfully sold the company after working together.</p>
+                    <div class="testimonial-quote">"They helped us streamline our launch process, deliver more value to our customers and automate processes to drive up revenue." — Ben Croft</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-company">COACHING.COM</div>
+                    <div class="testimonial-metric">2X</div>
+                    <div class="testimonial-result">Doubled Launch Revenue</div>
+                    <p class="testimonial-description">We were brought in mid-launch when it wasn't meeting targets. In just a few months we optimized the entire campaign and doubled the revenue.</p>
+                    <div class="testimonial-quote">"They came in mid-launch and helped us revamp emails, sales pages, improve scarcity, and created new assets—the results were phenomenal." — Alex Pascal</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-company">NISCHTZ INSTITUTE</div>
+                    <div class="testimonial-metric">$500K+</div>
+                    <div class="testimonial-result">100% Enrollment. Zero Spend.</div>
+                    <p class="testimonial-description">Created a certification for dentists in biological dentistry. Generated over $500K in sales within six months using only Instagram with zero marketing spend.</p>
+                    <div class="testimonial-quote">"Working with them has been a gamechanger in building my institute and personal brand. They were able to deliver results with zero marketing spend." — Dr. Dome</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-company">RAJIV TALREJA</div>
+                    <div class="testimonial-metric">INSTANT</div>
+                    <div class="testimonial-result">Results After First Session</div>
+                    <p class="testimonial-description">Their approach is laser focused on business objectives. They were able to support and mentor my marketing team really well from day one.</p>
+                    <div class="testimonial-quote">"Their approach is laser focused on business objectives. They were able to support and mentor my marketing team really well." — Rajiv Talreja</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-company">YOUR COMPANY</div>
+                    <div class="testimonial-metric">NEXT?</div>
+                    <div class="testimonial-result">3 spots left this quarter</div>
+                    <p class="testimonial-description">We only take on 6 clients per year. If you want results like these, you need to move fast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Strip -->
+    <section class="logo-strip">
+        <div class="container">
+            <div class="eyebrow" style="margin-bottom: 1rem;">Trusted By Industry Leaders</div>
+            <p style="text-align: center; color: var(--gray-600); font-size: 1.125rem; margin-bottom: 4rem;">Over $1 Billion in Revenue Generated for Clients Worldwide</p>
+            <div class="logos">
+                <div class="logo-item"><img src="https://static.showit.co/200/uq3UZsNjxNMNmDyfNvPqTg/253646/zeno_white_logo.png" alt="Zeno"></div>
+                <div class="logo-item"><img src="https://static.showit.co/200/nKprADLX6CLAoOMLZLlQJw/253646/vivanta_white.png" alt="Vivanta"></div>
+                <div class="logo-item"><img src="https://static.showit.co/200/aWSZboHVjBDX7HLP_h0i-g/253646/rvezy_white.png" alt="RVezy"></div>
+                <div class="logo-item"><img src="https://static.showit.co/200/750v-qthnJoDikut6CHhnQ/253646/catcha_logo_white.png" alt="Catcha Group"></div>
+                <div class="logo-item"><img src="https://static.showit.co/400/CBXrimNxkd-dez46JVM9NA/253646/coaching_com_white_logo.png" alt="Coaching.com"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <div class="problem-intro">
+                <h2>Your Funnel's Bleeding Cash</h2>
+                <p class="large-text">And your team's out of answers.</p>
+            </div>
+
+            <div class="problem-list">
+                <div class="problem-item">
+                    <h3>It All Worked...Until You Tried to Scale</h3>
+                    <p>Now CPMs are climbing, ROAS is nose-diving, and your CAC could feed a small army. But no amount of A/B tests or pretty dashboards is fixing the problem.</p>
+                </div>
+
+                <div class="problem-item">
+                    <h3>Nobody Can Tell You Why</h3>
+                    <p>The funnel's leaking. Everyone has a theory, but nobody can diagnose it. This isn't about bad creatives or lazy media buying—you've hit the complexity ceiling.</p>
+                </div>
+
+                <div class="problem-item">
+                    <h3>You've Outgrown Your Own Growth</h3>
+                    <p>What got you to 6 or 7 figures won't get you to 8, 9, and 10. Companies that scale bring in experts. Your team got you here—but next level performance requires next-level thinking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Solve Section -->
+    <section class="solve-section">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+                <h2>Let's Solve the Sh*t That Keeps You Up at Night</h2>
+            </div>
+
+            <div class="solve-grid">
+                <div class="solve-item">
+                    <h3>Your CAC's Climbing</h3>
+                    <p>And your funnel's coughing up dust. We rebuild the damn machine—then show your team how to drive it like it's stolen.</p>
+                </div>
+
+                <div class="solve-item">
+                    <h3>Your Creatives Are Tired</h3>
+                    <p>Your ads are talking to no one. We give you positioning that slices through noise and hooks real buyers—cold or not.</p>
+                </div>
+
+                <div class="solve-item">
+                    <h3>You've Got Traffic</h3>
+                    <p>But no one's buying. Our funnel psychology doesn't 'nurture.' It converts. Every click, scroll, and upsell baked in.</p>
+                </div>
+
+                <div class="solve-item">
+                    <h3>Budgets Bleeding</h3>
+                    <p>And wondering why "that agency" hasn't noticed. We don't need to give you "fresh assets." We give you systems that scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services-intro">
+                <div class="eyebrow">How We Work</div>
+                <h2>Three Ways to Scale</h2>
+                <p class="large-text">Done-With and Done-For-You are limited to 3 clients per quarter.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">// 01</div>
+                    <h3>Done-By-You</h3>
+                    <p class="large-text">Your team's got hands. What they need is a step-by-step playbook.</p>
+                    <ul class="service-features">
+                        <li>Strategic consulting and live audits</li>
+                        <li>Execution playbooks and frameworks</li>
+                        <li>Ongoing support to keep your team on track</li>
+                    </ul>
+                    <div class="service-best-for">Best for teams with execution power—but no scalable plan.</div>
+                    <a href="#contact" class="btn-secondary" style="margin-top: 2rem; width: 100%; text-align: center;">Learn More</a>
+                </div>
+
+                <div class="service-card featured">
+                    <div class="service-number">// 02</div>
+                    <h3>Done-With-You</h3>
+                    <p class="large-text">We work side-by-side with you to fix what's broken and scale what matters.</p>
+                    <ul class="service-features">
+                        <li>Funnel builds, offer tuning, ad strategy</li>
+                        <li>Live calls, testing plans, priority breakdowns</li>
+                        <li>Slack access for fast decisions and pivots</li>
+                    </ul>
+                    <div class="service-best-for">Best for founders who want senior operators, not account managers.</div>
+                    <a href="#contact" class="btn-primary" style="margin-top: 2rem; width: 100%; text-align: center;">Learn More</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-number">// 03</div>
+                    <h3>Done-For-You</h3>
+                    <p class="large-text">You don't want help. You want it handled. We rebuild your growth engine.</p>
+                    <ul class="service-features">
+                        <li>Full-service funnel and paid media execution</li>
+                        <li>Creative, email, CRO, campaign optimization</li>
+                        <li>Weekly reporting, forecasting, growth advisory</li>
+                    </ul>
+                    <div class="service-best-for">Best for businesses ready to scale fast—and get out of their own way.</div>
+                    <a href="#contact" class="btn-secondary" style="margin-top: 2rem; width: 100%; text-align: center;">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="case-studies-intro">
+                <div class="eyebrow">Case Studies</div>
+                <h2>From "Who?" to Headlines</h2>
+                <p class="large-text">These brands didn't just grow. They detonated.</p>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h3>ESTATE.CO</h3>
+                        <p>Fractionalizing Real Estate — A fractional ownership project that allowed anyone, anywhere to own shares in Beverly Real Estate. We created a go-to-market strategy bringing in $6.5M in investments from investors worldwide.</p>
+                        <div class="case-metrics">
+                            <div>
+                                <div class="case-metric-value">$6.5M</div>
+                                <div class="case-metric-label">In Investments</div>
+                            </div>
+                            <div>
+                                <div class="case-metric-value">6</div>
+                                <div class="case-metric-label">Months</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-image">
+                        <img src="https://static.showit.co/800/-Mw6pRHD7gZi4lSX5tLS8w/253646/harry-styles-house-081723-13-9df32035bc4349598885debcb3729faf.jpg" alt="Estate.co - Harry Styles House">
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-content">
+                    <div class="case-study-image">
+                        <img src="https://static.showit.co/800/BFDTA27txlp9NoSrpSLdOA/253646/1715255858145.jpg" alt="Coaching.com">
+                    </div>
+                    <div class="case-study-text">
+                        <h3>COACHING.COM</h3>
+                        <p>The World's Largest Coaching Platform — We were brought in when the launch wasn't meeting targets. In just a few months we optimized the entire campaign and doubled the revenue.</p>
+                        <div class="case-metrics">
+                            <div>
+                                <div class="case-metric-value">2X</div>
+                                <div class="case-metric-label">Revenue Growth</div>
+                            </div>
+                            <div>
+                                <div class="case-metric-value">60</div>
+                                <div class="case-metric-label">Days</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h3>ZENO</h3>
+                        <p>The World's First Learn2Earn App — Launched a virtual summit to introduce Zeno to the world. With zero list, we organized a summit with the biggest names in wellness and drew 25,000 attendees globally.</p>
+                        <div class="case-metrics">
+                            <div>
+                                <div class="case-metric-value">25K</div>
+                                <div class="case-metric-label">Attendees</div>
+                            </div>
+                            <div>
+                                <div class="case-metric-value">0</div>
+                                <div class="case-metric-label">Starting List</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-image">
+                        <img src="https://static.showit.co/800/T-Aq9Q1FuxDBO0Eb3zw32g/253646/1712855870422.jpg" alt="Zeno">
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-content">
+                    <div class="case-study-image">
+                        <img src="https://static.showit.co/800/yJME2WYMNlNR3WxOr-CP9Q/253646/660fb2905776331fe1b0602e.jpg" alt="Nischtz Institute">
+                    </div>
+                    <div class="case-study-text">
+                        <h3>NISCHTZ INSTITUTE</h3>
+                        <p>The Institute of Biological Dentistry — Created a certification for dentists in biological dentistry. Generated over $500K in sales within six months using only Instagram with zero marketing spend.</p>
+                        <div class="case-metrics">
+                            <div>
+                                <div class="case-metric-value">$500K+</div>
+                                <div class="case-metric-label">Sales Generated</div>
+                            </div>
+                            <div>
+                                <div class="case-metric-value">$0</div>
+                                <div class="case-metric-label">Ad Spend</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-content">
+                    <div class="case-study-text">
+                        <h3>RVEZY</h3>
+                        <p>Scaling on Digital Advertising — Within one month we improved their ROAS by over 30%, dropped CAC by 20%, and launched app install campaigns with a ROAS of over 2000%.</p>
+                        <div class="case-metrics">
+                            <div>
+                                <div class="case-metric-value">30%</div>
+                                <div class="case-metric-label">ROAS Increase</div>
+                            </div>
+                            <div>
+                                <div class="case-metric-value">2000%</div>
+                                <div class="case-metric-label">App Install ROAS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-image">
+                        <img src="https://static.showit.co/800/b2R4N_AL_nuuqGQab92pOQ/253646/guests-01-min-1.jpg" alt="RVezy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="eyebrow">About Us</div>
+                <h2>We Don't Play Nice.<br>We Play to Win.</h2>
+                <p class="large-text">Most agencies want you dependent. We want you dangerous.</p>
+                <p class="large-text">That's why we go deep with six clients a year—max. We rebuild your funnel, fix your offer, arm your team, then hand you the keys. No hand-holding. No bloated retainers. Just senior operators helping you outgrow us—fast.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Clients Per Year</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">$1B+</div>
+                    <div class="stat-label">Revenue Generated</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">91</div>
+                    <div class="stat-label">Applications Received</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faqs">
+        <div class="container-narrow">
+            <div style="text-align: center; margin-bottom: 5rem;">
+                <div class="eyebrow">FAQs</div>
+                <h2>Questions? We've Got Answers.</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Are you as expensive as you look?</h3>
+                    <p>We're not cheap, but neither is that sports car you've been eyeing. The difference? We actually make you money. Lots of it. Our clients see ROI that makes the investment look like pocket change.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How fast can you scale my business?</h3>
+                    <p>How fast can you handle success? We've been known to double revenue in 60 days, generate millions in months, and break growth charts. But speed without sustainability is just a spike. We build engines that scale predictably.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you work with startups?</h3>
+                    <p>If you've got ambition bigger than your current budget, let's talk. We love turning underdogs into category leaders. But we work with businesses doing at least $500K/year—you need traction, not just an idea.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Why only 6 clients per year?</h3>
+                    <p>Because we're not here to collect retainers. We go deep—rebuilding your entire growth engine, training your team, and staying in the trenches with you. That level of immersion? We can only do it right with a handful of clients.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What makes you different from other agencies?</h3>
+                    <p>Most agencies want you dependent. We want you dangerous. We don't just run campaigns—we rebuild your funnel, train your team, then hand you the keys. When we're done, you don't need us anymore. That's the point.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container-narrow">
+            <div class="final-cta-content">
+                <h2>Ready to Stop Bleeding Cash<br>and Start Scaling Smart?</h2>
+                <p class="large-text">Let's turn your wildest business dreams into your competitors' recurring nightmares.</p>
+                <div class="final-cta-note" style="margin-bottom: 4rem;">91 Applications Received · 6 Clients Accepted · Don't Wait</div>
+                
+                <!-- Contact Form -->
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xgoeaapd" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company *</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website *</label>
+                            <input type="url" id="website" name="website" placeholder="https://" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="revenue">Current Revenue *</label>
+                            <select id="revenue" name="revenue" required>
+                                <option value="">Select range</option>
+                                <option value="0-1m">$0 - $1M</option>
+                                <option value="1-5m">$1M - $5M</option>
+                                <option value="5-10m">$5M - $10M</option>
+                                <option value="10-50m">$10M - $50M</option>
+                                <option value="50m+">$50M+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">What service are you interested in? *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select service</option>
+                                <option value="done-by-you">Done-By-You</option>
+                                <option value="done-with-you">Done-With-You</option>
+                                <option value="done-for-you">Done-For-You</option>
+                                <option value="not-sure">Not Sure Yet</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="challenge">What's your biggest challenge right now? *</label>
+                        <textarea id="challenge" name="challenge" rows="4" required></textarea>
+                    </div>
+                    
+                    <input type="hidden" name="_replyto" value="akshay@weconquermedia.com">
+                    <input type="hidden" name="_subject" value="New WeConquer Media Application">
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 2rem;">Submit Application</button>
+                </form>
+                
+                <p style="text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 0.875rem; margin-top: 2rem;">
+                    Form powered by Formspree. Your information is secure and will only be sent to akshay@weconquermedia.com
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>WE CONQUER MEDIA</h4>
+                    <p>Performance marketing for serious founders who are done guessing and ready to scale with predictable, profitable growth systems.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#services">Done-By-You</a></li>
+                        <li><a href="#services">Done-With-You</a></li>
+                        <li><a href="#services">Done-For-You</a></li>
+                        <li><a href="#results">Case Studies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Legal Notices</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 We Conquer Media LLC. All Rights Reserved.</p>
+                <p>Go from millions to billions.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
