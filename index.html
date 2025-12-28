@@ -477,12 +477,13 @@
 
         .logo-item {
             height: 100px;
+            width: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: transparent;
             border: none;
-            padding: 1.5rem;
+            padding: 0;
             transition: all 0.3s;
         }
 
@@ -492,15 +493,58 @@
         }
 
         .logo-item img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 140px;
+            height: 50px;
             object-fit: contain;
-            filter: grayscale(100%) opacity(0.6);
+            /* Convert all logos to white and normalize appearance */
+            filter: brightness(0) invert(1) grayscale(100%) opacity(0.7);
             transition: all 0.3s;
         }
 
+        /* Make specific logos HUGE */
+        .logo-item:nth-child(2) img,
+        .logo-item:nth-child(3) img {
+            width: 560px;
+            height: 160px;
+        }
+
+        /* Make Coaching.com bigger */
+        .logo-item:nth-child(5) img {
+            width: 280px;
+            height: 100px;
+        }
+
         .logo-item:hover img {
-            filter: grayscale(0%) opacity(1);
+            filter: brightness(0) invert(1) grayscale(100%) opacity(1);
+        }
+
+        @media (max-width: 768px) {
+            .logos {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .logo-item {
+                height: 80px;
+                width: 160px;
+                padding: 0;
+            }
+
+            .logo-item img {
+                width: 120px;
+                height: 45px;
+            }
+
+            .logo-item:nth-child(2) img,
+            .logo-item:nth-child(3) img {
+                width: 400px;
+                height: 130px;
+            }
+
+            .logo-item:nth-child(5) img {
+                width: 240px;
+                height: 90px;
+            }
         }
 
         /* Problem Section - Clean & Direct */
@@ -839,6 +883,63 @@
 
         .case-study:hover .case-study-image img {
             transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+            .case-study-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .case-study-text {
+                order: 1;
+            }
+
+            .case-study-image {
+                order: 2;
+                height: 400px;
+            }
+
+            .case-study-text h3 {
+                font-size: 2.5rem;
+            }
+
+            .case-metrics {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .case-study-content {
+                gap: 2rem;
+            }
+
+            .case-study-image {
+                height: 300px;
+                order: 2;
+            }
+
+            .case-study-text {
+                order: 1;
+            }
+
+            .case-study-text h3 {
+                font-size: 2rem;
+            }
+
+            .case-study-text p {
+                font-size: 1.125rem;
+            }
+
+            .case-metric-value {
+                font-size: 3rem;
+            }
+
+            .case-metrics {
+                gap: 1.5rem;
+            }
         }
 
         /* About Section */
@@ -1707,7 +1808,7 @@
                 </form>
                 
                 <p style="text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 0.875rem; margin-top: 2rem;">
-                    Form powered by Formspree. Your information is secure and will only be sent to akshay@weconquermedia.com
+                    Form powered by Formspree. Your information is secure and will only be sent to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="127379617a736b526577717d7c636777607f77767b733c717d7f">[email&#160;protected]</a>
                 </p>
             </div>
         </div>
@@ -1752,11 +1853,4 @@
             </div>
             
             <div class="footer-bottom">
-                <p>© 2024 We Conquer Media LLC. All Rights Reserved.</p>
-                <p>Go from millions to billions.</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                <p>© 2024 We Conquer Media LLC. All Rights Res
